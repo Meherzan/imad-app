@@ -5,22 +5,38 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleone={
-    title:'Article One | Meherzan Turel',
-    heading:'Article One',
-    date:'August 6, 2017',
-    content:` <p>
-                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
-                </p>
-                <p>
-                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
-                </p>
-                <p>
-                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
-                </p>`,
+var articles={
+    var articleone:{
+        title:'Article One | Meherzan Turel',
+        heading:'Article One',
+        date:'August 3, 2017',
+        content:` <p>
+                        This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                    </p>
+                    <p>
+                        This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                    </p>
+                    <p>
+                        This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                    </p>`
+    };
+    var aricletwo:{
+        title:'Article Two | Meherzan Turel',
+        heading:'Article Two',
+        date:'August 4, 2017',
+        content:` <p>
+                        This is content of my article two.
+                    </p>`
+                    };
+    var articlethree:{
+        title:'Article Three | Meherzan Turel',
+        heading:'Article Three',
+        date:'August 6, 2017',
+        content:` <p>
+                        This is content of my article three.
+                    </p>`,
+    };
 };
-
 function createtemplate (data){
     var title= data.title;
     var date= data.date;
@@ -60,8 +76,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-      res.send(createtemplate(articleone));
+app.get('/:articlename',function(req,res){
+    //articlename == article-one
+    //articles[articlename] == {} content object for article one
+    var articlename=req.params.articlename;
+    res.send(createtemplate(articles[articlename]));
 });
 
 app.get('/article-two',function(req,res){
