@@ -5,6 +5,59 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleone={
+    title:'Article One | Meherzan Turel',
+    heading:'Article One',
+    date:'August 6, 2017',
+    content:` <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>
+                <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>
+                <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>`,
+};
+
+
+var htmltemplate=`
+       <html>
+    <head>
+        <title>
+           ${title}
+        </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr />
+            <h3>
+                Article One
+            </h3>
+            <div>
+                ${date}
+            </div>
+            <div>
+                <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>
+                <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>
+                <p>
+                    This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
