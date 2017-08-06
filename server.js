@@ -20,6 +20,7 @@ var articles={
                         This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
                     </p>`
     };
+    
     var aricletwo:{
         title:'Article Two | Meherzan Turel',
         heading:'Article Two',
@@ -27,7 +28,8 @@ var articles={
         content:` <p>
                         This is content of my article two.
                     </p>`
-                    };
+    };
+                    
     var articlethree:{
         title:'Article Three | Meherzan Turel',
         heading:'Article Three',
