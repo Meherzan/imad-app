@@ -15,11 +15,12 @@ app.use(morgan('combined'));
 
 var articles={
     var articleone:{
-        title:'Article One | Meherzan Turel',
+        title:'Article One | meherzanturel1997',
         heading:'Article One',
         date:'August 3, 2017',
         content:` <p>
-                        This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
+                        This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one. This is contemt of the article one. 
+
                     </p>
                     <p>
                         This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.This is content of te artcle one.
